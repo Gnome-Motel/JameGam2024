@@ -1,10 +1,11 @@
 [gd_scene load_steps=5 format=3 uid="uid://b8njd1q80v1xo"]
 
 [ext_resource type="Script" path="res://Scripts/player_movement.gd" id="1_ixo0q"]
-[ext_resource type="Texture2D" path="res://Assets/player_sprite.tres" id="2_jaa66"]
-[ext_resource type="Texture2D" path="res://Assets/cane.tres" id="3_g0mnd"]
+[ext_resource type="Texture2D" uid="uid://bymv0woe5sikf" path="res://Assets/player_sprite.tres" id="2_jaa66"]
+[ext_resource type="Texture2D" uid="uid://c8u7ggxt8mkrr" path="res://Assets/cane.tres" id="3_g0mnd"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_sg3gy"]
+radius = 4.0
 
 [node name="Player" type="RigidBody2D"]
 position = Vector2(2.08165e-12, -1)
