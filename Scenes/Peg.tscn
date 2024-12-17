@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://cve5amftquiod"]
+[gd_scene load_steps=4 format=3 uid="uid://cve5amftquiod"]
 
-[ext_resource type="Texture2D" uid="uid://bc08rxxgw88h2" path="res://Assets/Tree and peg.png" id="1_n6a4n"]
+[ext_resource type="Texture2D" uid="uid://b0h65453t1dvv" path="res://Assets/Tree and peg.png" id="1_n6a4n"]
+[ext_resource type="Script" path="res://Scripts/peg.gd" id="1_wht7o"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7kslu"]
 
 [node name="Peg" type="StaticBody2D"]
 scale = Vector2(1.5, 1.5)
+collision_layer = 4
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(1.052, 1)
@@ -15,3 +17,15 @@ region_rect = Rect2(48, 16, 16, 16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_7kslu")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+script = ExtResource("1_wht7o")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_7kslu")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]

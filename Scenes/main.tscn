@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=4 uid="uid://dwlqdww6qlji6"]
 
-[ext_resource type="Texture2D" uid="uid://bc08rxxgw88h2" path="res://Assets/Tree and peg.png" id="1_sbs53"]
+[ext_resource type="Texture2D" uid="uid://b0h65453t1dvv" path="res://Assets/Tree and peg.png" id="1_sbs53"]
 [ext_resource type="PackedScene" uid="uid://hxb4b32ufe2u" path="res://Scenes/Temp_Player.tscn" id="2_0fw76"]
 [ext_resource type="PackedScene" uid="uid://cve5amftquiod" path="res://Scenes/Peg.tscn" id="3_w2yvi"]
 
