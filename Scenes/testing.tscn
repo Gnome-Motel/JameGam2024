@@ -8,6 +8,7 @@
 [node name="Testing" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(5, 5)
 
 [node name="Peg" type="StaticBody2D" parent="."]
 position = Vector2(0, -1)
@@ -16,13 +17,12 @@ position = Vector2(0, -1)
 shape = SubResource("CircleShape2D_eder2")
 
 [node name="Sprite2D" type="Sprite2D" parent="Peg"]
-scale = Vector2(0.2, 0.2)
+scale = Vector2(0.02, 0.02)
 texture = ExtResource("2_ui2tn")
 
 [node name="PinJoint2D" type="PinJoint2D" parent="Peg"]
-position = Vector2(0, 1)
 node_a = NodePath("..")
 node_b = NodePath("../../Player")
 
 [node name="Player" parent="." instance=ExtResource("2_cfuqp")]
-position = Vector2(2.08165e-12, 140)
+position = Vector2(0, -1)
