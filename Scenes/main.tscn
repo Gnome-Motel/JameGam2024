@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://dwlqdww6qlji6"]
+[gd_scene load_steps=7 format=4 uid="uid://dwlqdww6qlji6"]
 
 [ext_resource type="Texture2D" uid="uid://b0h65453t1dvv" path="res://Assets/Tree and peg.png" id="1_sbs53"]
 [ext_resource type="PackedScene" uid="uid://hxb4b32ufe2u" path="res://Scenes/Temp_Player.tscn" id="2_0fw76"]
 [ext_resource type="PackedScene" uid="uid://cve5amftquiod" path="res://Scenes/Peg.tscn" id="3_w2yvi"]
+[ext_resource type="PackedScene" uid="uid://b8njd1q80v1xo" path="res://Scenes/player_object.tscn" id="4_imwwv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kd348"]
 texture = ExtResource("1_sbs53")
@@ -34,3 +35,6 @@ position = Vector2(77, 55)
 
 [node name="Peg3" parent="Peg Leg" instance=ExtResource("3_w2yvi")]
 position = Vector2(32, 9)
+
+[node name="Player" parent="Peg Leg" groups=["Player"] instance=ExtResource("4_imwwv")]
+position = Vector2(-97, -33)
