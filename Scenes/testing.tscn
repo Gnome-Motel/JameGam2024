@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://vnnhfuf1xiwp"]
+
+[ext_resource type="PackedScene" uid="uid://b8njd1q80v1xo" path="res://Scenes/player_object.tscn" id="2_cfuqp"]
+[ext_resource type="Texture2D" uid="uid://60ve8nkgip4g" path="res://icon.svg" id="2_ui2tn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_eder2"]
+
+[node name="Testing" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Peg" type="StaticBody2D" parent="."]
+position = Vector2(0, -1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Peg"]
+shape = SubResource("CircleShape2D_eder2")
+
+[node name="Sprite2D" type="Sprite2D" parent="Peg"]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_ui2tn")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="Peg"]
+position = Vector2(0, 1)
+node_a = NodePath("..")
+node_b = NodePath("../../Player")
+
+[node name="Player" parent="." instance=ExtResource("2_cfuqp")]
+position = Vector2(2.08165e-12, 140)
