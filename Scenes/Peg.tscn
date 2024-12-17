@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cve5amftquiod"]
+
+[ext_resource type="Texture2D" uid="uid://bc08rxxgw88h2" path="res://Assets/Tree and peg.png" id="1_n6a4n"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7kslu"]
+
+[node name="Peg" type="StaticBody2D"]
+scale = Vector2(1.5, 1.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.052, 1)
+texture = ExtResource("1_n6a4n")
+region_enabled = true
+region_rect = Rect2(48, 16, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_7kslu")
